@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "a4bdd8fb-9718-44b8-a205-b5ed6c214b20": {
+      "ProjectGuid": "a4bdd8fb-9718-44b8-a205-b5ed6c214b20",
+      "DisplayName": "AgencyProjectT",
+      "ColorIndex": 0
+    },
+    "14028e95-6ab6-4563-8b47-ae02991a40f0": {
+      "ProjectGuid": "14028e95-6ab6-4563-8b47-ae02991a40f0",
+      "DisplayName": "Domain",
+      "ColorIndex": 1
+    },
+    "d6218cdc-67ed-4647-9f51-a8d28b08a90e": {
+      "ProjectGuid": "d6218cdc-67ed-4647-9f51-a8d28b08a90e",
+      "DisplayName": "Application",
+      "ColorIndex": 2
+    },
+    "aac4af41-ba63-4336-a3bc-ec913614cdb4": {
+      "ProjectGuid": "aac4af41-ba63-4336-a3bc-ec913614cdb4",
+      "DisplayName": "Infrastructure",
+      "ColorIndex": 3
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Прочие файлы",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 4
+}

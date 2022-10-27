@@ -1,0 +1,45 @@
+﻿using Application.Common.Interfaces;
+using Domain.Entities;
+using MediatR;
+using MongoDB.Driver;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Application.SaveLists.Commands
+{
+    public class UpdateSaveListCommandHandler : IRequestHandler<UpdateSaveListCommand, string>
+    {
+        private IMongoCollection<SaveList> _saveList { get; }
+
+        public UpdateSaveListCommandHandler(IAgencyDbConnection connection)
+        {
+            _saveList = connection.ConnectToMongo<SaveList>("SaveList");
+        }
+
+        public async Task<string> Handle(UpdateSaveListCommand request, CancellationToken cancellationToken)
+        {
+            var newList = new SaveList
+            {
+                ListID = request.ListID,
+                AdvertID = request.AdvertID,
+                UserID = request.UserID
+            };
+
+            await _saveList.ReplaceOneAsync(Builders<SaveList>.Filter.Eq("_id", request.ListID), newList);
+
+            return newList.ListID;
+        }
+    }
+
+    public record UpdateSaveListCommand : IRequest<string>
+    {
+        public string ListID { get; set; }
+
+        public string AdvertID { get; set; }
+
+        public string UserID { get; set; }
+    }
+}
