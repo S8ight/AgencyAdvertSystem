@@ -11,7 +11,9 @@
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.0.2" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="6.0.4" />
     <PackageReference Include="MongoDB.Driver" Version="2.15.1" />
+    <PackageReference Include="StackExchange.Redis" Version="2.6.70" />
   </ItemGroup>
 
   <ItemGroup>

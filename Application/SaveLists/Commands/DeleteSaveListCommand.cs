@@ -24,7 +24,7 @@ namespace Application.SaveLists.Commands
         {
             var saveList = await _saveList.Find(x => x.ListID == request.Id).ToListAsync();
 
-            if (saveList == null) throw new NotFoundException("SaveList", request.Id);
+            if (saveList.Count == 0) throw new NotFoundException("SaveList", request.Id);
 
             await _saveList.DeleteOneAsync(x => x.ListID == request.Id);
 

@@ -32,6 +32,11 @@ builder.Services.AddMediatR(typeof(GetAdvertsPaginationList).GetTypeInfo().Assem
 builder.Services.AddMediatR(typeof(GetAdvertsById).GetTypeInfo().Assembly);
 builder.Services.AddMediatR(typeof(DeleteAdvertCommand).GetTypeInfo().Assembly);
 builder.Services.AddMediatR(typeof(UpdateAdvertCommand).GetTypeInfo().Assembly);
+builder.Services.AddStackExchangeRedisCache(options =>
+{
+    options.Configuration = builder.Configuration.GetConnectionString("Redis");
+    options.InstanceName = "RedisAdvertsProject";
+});
 
 builder.Services.AddControllers();
 

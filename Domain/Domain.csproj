@@ -8,7 +8,9 @@
 
   <ItemGroup>
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="6.0.4" />
     <PackageReference Include="MongoDB.Bson" Version="2.15.1" />
+    <PackageReference Include="StackExchange.Redis" Version="2.6.70" />
   </ItemGroup>
 
 </Project>
